@@ -1,0 +1,6 @@
+.tab-pane .tab-header-area .tab-header-background { -fx-background-color: #E9EDF5; }
+.tab-pane .tab { -fx-background-color: #E1E6F0; -fx-background-radius: 8 8 0 0; }
+.tab-pane .tab:selected { -fx-background-color: #FFFFFF; }
+.tab-pane .tab .tab-label { -fx-text-fill: #35466D; -fx-font-weight: bold; }
+.text-area { -fx-font-family: "Consolas"; -fx-font-size: 12px; }
+.button:hover { -fx-background-color: #526A9B !important; }
