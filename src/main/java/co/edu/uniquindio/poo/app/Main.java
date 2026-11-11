@@ -76,15 +76,15 @@ public class Main extends Application {
         return tab;
     }
 
-    private Button boton(String texto, Runnable accion) {
+    private Button boton(String texto, Accion accion) {
         Button boton = new Button(texto);
         boton.setStyle("-fx-background-color: #35466D; -fx-text-fill: white; -fx-padding: 10 15 10 15;");
         boton.setOnAction(e -> ejecutar(accion));
         return boton;
     }
 
-    private void ejecutar(Runnable accion) {
-        try { accion.run(); }
+    private void ejecutar(Accion accion) {
+        try { accion.ejecutar(); }
         catch (Exception e) { error(e.getMessage()); }
     }
 
@@ -255,5 +255,5 @@ public class Main extends Application {
         alerta.showAndWait();
     }
 
-    public static void main(String[] args) { launch(args); }
+    @FunctionalInterface\n    private interface Accion { void ejecutar() throws Exception; }\n\n    public static void main(String[] args) { launch(args); }
 }
