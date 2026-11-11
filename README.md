@@ -41,4 +41,4 @@ mvn test
 > Proyecto académico. No procesa dinero real ni se conecta a entidades financieras.
 
 ## Estado
-Repositorio preparado para incorporar el código fuente, pruebas y documentación del proyecto.
+El repositorio contiene el código fuente, las pruebas automatizadas y la documentación técnica y de sustentación. Los datos de la aplicación se mantienen en memoria durante la ejecución.
