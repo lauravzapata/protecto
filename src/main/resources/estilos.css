@@ -1,6 +1,65 @@
-.tab-pane .tab-header-area .tab-header-background { -fx-background-color: #E9EDF5; }
-.tab-pane .tab { -fx-background-color: #E1E6F0; -fx-background-radius: 8 8 0 0; }
-.tab-pane .tab:selected { -fx-background-color: #FFFFFF; }
-.tab-pane .tab .tab-label { -fx-text-fill: #35466D; -fx-font-weight: bold; }
-.text-area { -fx-font-family: "Consolas"; -fx-font-size: 12px; }
-.button:hover { -fx-background-color: #526A9B !important; }
+.root-pane {
+    -fx-background-color: #F4F6FB;
+}
+.header {
+    -fx-background-color: linear-gradient(to right, #263B67, #526A9B);
+    -fx-padding: 26 30 24 30;
+}
+.main-title {
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #E3E9F5;
+}
+.main-tabs .tab-header-area .tab-header-background {
+    -fx-background-color: #E7EBF4;
+}
+.main-tabs .tab {
+    -fx-background-color: #E1E6F0;
+    -fx-padding: 8 12 8 12;
+}
+.main-tabs .tab:selected {
+    -fx-background-color: white;
+}
+.main-tabs .tab .tab-label {
+    -fx-text-fill: #35466D;
+    -fx-font-weight: bold;
+}
+.tab-content {
+    -fx-padding: 22;
+    -fx-background-color: white;
+    -fx-min-height: 95px;
+}
+.button {
+    -fx-background-color: #35466D;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 11 17 11 17;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #526A9B;
+}
+.results-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 18;
+    -fx-border-color: #E2E7F0;
+    -fx-border-radius: 12;
+}
+.section-title {
+    -fx-text-fill: #35466D;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.results-area {
+    -fx-font-family: "Consolas";
+    -fx-font-size: 13px;
+    -fx-control-inner-background: #FAFBFD;
+    -fx-background-radius: 8;
+}

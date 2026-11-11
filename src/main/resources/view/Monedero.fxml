@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.viewcontroller.MonederoViewController"
+            styleClass="root-pane">
+    <top>
+        <VBox spacing="5" styleClass="header">
+            <Label text="MONEDERO PLUS" styleClass="main-title"/>
+            <Label text="Administra tu dinero, tus movimientos y tus beneficios" styleClass="subtitle"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="16">
+            <padding><Insets top="18" right="22" bottom="20" left="22"/></padding>
+            <TabPane tabClosingPolicy="UNAVAILABLE" styleClass="main-tabs">
+                <tabs>
+                    <Tab text="Clientes">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Registrar cliente" onAction="#registrarCliente"/>
+                            <Button text="Consultar clientes" onAction="#listarClientes"/>
+                        </FlowPane>
+                    </Tab>
+                    <Tab text="Monederos">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Crear monedero" onAction="#crearMonedero"/>
+                            <Button text="Consultar monederos" onAction="#listarMonederos"/>
+                        </FlowPane>
+                    </Tab>
+                    <Tab text="Movimientos">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Depositar" onAction="#depositar"/>
+                            <Button text="Retirar" onAction="#retirar"/>
+                            <Button text="Transferir" onAction="#transferir"/>
+                            <Button text="Ver historial" onAction="#historial"/>
+                            <Button text="Revertir transacción" onAction="#revertir"/>
+                        </FlowPane>
+                    </Tab>
+                    <Tab text="Puntos y rangos">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Consultar puntos y rango" onAction="#consultarPuntos"/>
+                            <Button text="Canjear beneficio" onAction="#canjear"/>
+                            <Button text="Aplicar bono de $50" onAction="#aplicarBono"/>
+                        </FlowPane>
+                    </Tab>
+                    <Tab text="Programadas">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Programar depósito" onAction="#programarDeposito"/>
+                            <Button text="Procesar pendientes" onAction="#procesarProgramadas"/>
+                            <Button text="Consultar programadas" onAction="#listarProgramadas"/>
+                        </FlowPane>
+                    </Tab>
+                    <Tab text="Reportes">
+                        <FlowPane hgap="10" vgap="10" styleClass="tab-content">
+                            <Button text="Reporte de gastos" onAction="#reporte"/>
+                            <Button text="Detectar atípicas" onAction="#atipicas"/>
+                            <Button text="Ver notificaciones" onAction="#notificaciones"/>
+                        </FlowPane>
+                    </Tab>
+                </tabs>
+            </TabPane>
+            <VBox spacing="9" VBox.vgrow="ALWAYS" styleClass="results-card">
+                <Label text="RESULTADOS" styleClass="section-title"/>
+                <TextArea fx:id="resultados" text="Bienvenida a Monedero Plus. Selecciona una operación."
+                          editable="false" wrapText="true" VBox.vgrow="ALWAYS"
+                          styleClass="results-area"/>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
